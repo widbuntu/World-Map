@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="map-column">
+    <div id="svg-container"></div>
+  </div>
+  <div class="floating-info-box">
+    <h2>Country Information</h2>
+    <div id="country-info">
+      <div *ngIf="countryInfo">
+        <strong>Country:</strong> {{countryInfo.name}}<br>
+        <strong>Region:</strong> {{countryInfo.region}}<br>
+        <strong>Income Level:</strong> {{countryInfo.incomeLevel}}<br>
+        <strong>Capital City:</strong> {{countryInfo.capitalCity}}<br>
+        <strong>Lending Type:</strong> {{countryInfo.lendingType}}<br>
+        <strong>Employment in Agriculture:</strong> {{countryInfo.employmentInAgriculture}}%
+      </div>
+      <div *ngIf="!countryInfo">
+        Hover over a country to see the information.
+      </div>
+    </div>
+  </div>
+</div>
